@@ -8,6 +8,11 @@ $(document).ready(function() {
 // This if statement checks if the first leter of the input is a vowel.
     if (vowels.includes(word[0])) {
       word = word + "way";
+    } else {
+      // word is redefined as Word + the First Letter at the end.
+      word += word[0]
+      word = word.slice(1)
+      word = word + "ay";
     }
 
     $(".piglatin").append(word)
